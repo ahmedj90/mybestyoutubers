@@ -1,0 +1,97 @@
+.g1-sharebar {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    #{$left}: 0;
+    #{$right}: 0;
+
+    background: #fff;
+
+    @include box-shadow( 0 0 10px rgba(0,0,0, 0.2) );
+}
+
+
+body.admin-bar {
+    .g1-sharebar {
+        top: 32px;
+    }
+}
+
+@media screen and ( max-width: 782px ) {
+    body.admin-bar {
+        .g1-sharebar {
+            top: 46px;
+        }
+    }
+}
+
+@media only screen and ( min-width: $mobile_breakpoint + 1px ) {
+    .g1-sharebar-on {
+        display: block;
+    }
+
+    .g1-sharebar-off {
+        display: none;
+    }
+
+    /* CSS3 animations */
+    $_duration: 0.375s;
+    $_delay: 0.125s;
+    .cssanimations {
+        .g1-sharebar {
+            display: block;
+            @include transition(
+                    visibility 0s,
+                    opacity $_duration ease-in-out,
+                    transform $_duration ease-in-out
+            );
+
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+        }
+
+        .g1-sharebar-off {
+            visibility: hidden;
+            @include translate( 0px, -100% );
+
+            @include transition(
+                    visibility 0s $_duration,
+                    opacity $_duration ease-in-out,
+                    transform $_duration ease-in-out
+            );
+        }
+
+        .g1-sharebar-on {
+            visibility: visible;
+            @include translate( 0px, 0px );
+        }
+    }
+}
+
+
+
+
+
+
+
+.g1-sharebar {
+    .mashsb-container {
+        padding-top: 6px;
+        padding-bottom: 3px;
+    }
+
+    .mashsbcount {
+        width: 120px - 15px;
+    }
+
+    .mashsbcount,
+    .mashpv .count {
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .mashsb-sharetext {
+        display: block;
+    }
+}

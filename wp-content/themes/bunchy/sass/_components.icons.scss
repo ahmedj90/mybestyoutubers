@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "bunchicon";
+    src:url("bunchicon/fonts/bunchicon.eot");
+    src:url("bunchicon/fonts/bunchicon.eot?#iefix") format("embedded-opentype"),
+    url("bunchicon/fonts/bunchicon.woff") format("woff"),
+    url("bunchicon/fonts/bunchicon.ttf") format("truetype"),
+    url("bunchicon/fonts/bunchicon.svg#bunchicon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bunchy-icon-person {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    font-style: normal;
+    text-align: center;
+
+    &:before {
+        display: inline-block;
+        font-size: 32px;
+        line-height: 40px;
+        font-family: "bunchicon", sans-serif;
+        font-weight: normal;
+
+        vertical-align: middle;
+
+        content: "\e01d";
+    }
+}
+
+.bunchy-icon-search {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    font-style: normal;
+    text-align: center;
+
+    &:before {
+        display: inline-block;
+        font-size: 34px;
+        line-height: 30px;
+        font-family: "bunchicon", sans-serif;
+        font-weight: normal;
+
+        vertical-align: middle;
+
+        content: "\e005";
+    }
+}
+
+.bunchy-icon-follow {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    font-style: normal;
+    text-align: center;
+
+    &:before {
+        display: inline-block;
+        font-size: 32px;
+        line-height: 30px;
+        font-family: "bunchicon", sans-serif;
+        font-weight: normal;
+
+        vertical-align: middle;
+
+        content: "\e017";
+    }
+}

@@ -1,0 +1,200 @@
+/* --- Pagination, Page links ------------------------------------------------------------------ */
+.g1-pagination {
+    clear: both;
+    margin-bottom: 2.25rem;
+
+    position: relative;
+
+    font-size: 16px;
+    font-family:  $important_font_family;
+
+
+    ul {
+        position: relative;
+        margin: 0 -3px;
+        list-style: none;
+
+        text-align: center;
+
+        &:after {
+            display:table;
+            clear:both;
+            content:"";
+        }
+
+        > li {
+            display: inline-block;
+            margin: 0;
+            padding: 0 3px;
+
+            vertical-align: middle;
+
+            > a {
+                display: inline-block;
+                padding: 0.25rem 10px;
+            }
+
+            > span {
+                display: inline-block;
+                padding: 0.25rem 10px;
+            }
+        }
+
+        > .g1-pagination-item {
+            > a {
+                padding: 10px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        > .g1-pagination-item-current {
+            > span {
+                padding: 10px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+
+.g1-pagination-label {
+    padding: 5px 0;
+    text-align: center;
+    font: 16px/20px $meta_font_family;
+}
+
+.g1-pagination-item-prev {
+    @include box-sizing( border-box );
+    margin-#{$right}: 1em;
+
+    /* lsaquo */
+    > .prev {
+        display: block;
+
+        &:before {
+            display: inline-block;
+            margin-#{$right}: 0.33em;
+
+            font: 17px/1 "bunchicon";
+            line-height: inherit;
+            vertical-align: middle;
+
+            content: if-ltr( "\e027", "\e028" );
+        }
+    }
+}
+
+
+
+.g1-pagination-item-next {
+    @include box-sizing( border-box );
+    margin-#{$left}: 1em;
+
+    /* rsaquo */
+    > .next {
+        display: block;
+
+        &:after {
+            display: inline-block;
+            margin-#{$left}: 0.33em;
+
+            font: 17px/1 "bunchicon";
+            line-height: inherit;
+            vertical-align: middle;
+
+            content: if-ltr( "\e028", "\e027" );
+        }
+    }
+}
+
+@media only screen and ( max-width: 600px ) {
+    .g1-pagination-item-prev > .prev {
+        font-size: 0;
+
+        &:before {
+            margin-#{$right}: 0;
+        }
+    }
+
+    .g1-pagination-item-next > .next {
+        font-size: 0;
+
+        &:after {
+            margin-#{$left}: 0;
+        }
+    }
+}
+
+.g1-pagination-just-arrows {
+    .g1-pagination-item-prev > .prev {
+        font-size: 0;
+
+        &:before {
+            margin-#{$right}: 0;
+        }
+    }
+
+    .g1-pagination-item-next > .next {
+        font-size: 0;
+
+        &:after {
+            margin-#{$left}: 0;
+        }
+    }
+}
+
+
+
+.g1-pagination-label-links {
+    display: none;
+}
+
+
+
+.g1-pagination-label-xofy {
+    width: 33.333%;
+    margin: 0 auto;
+    position: absolute;
+    #{$left}: 0;
+    #{$right}: 0;
+
+    & + ul {
+        .g1-pagination-item-prev {
+            width: 33.333%;
+            float: $left;
+        }
+
+        .g1-pagination-item-next {
+            width: 33.333%;
+            float: $right;
+        }
+
+        .g1-pagination-item,
+        .g1-pagination-item-current {
+            display: none;
+        }
+    }
+}
+
+.g1-pagination-label-none {
+    display: none;
+
+    & + ul {
+        .g1-pagination-item-prev {
+            width: 50%;
+            float: $left;
+        }
+
+        .g1-pagination-item-next {
+            width: 50%;
+            float: $right;
+        }
+
+        .g1-pagination-item,
+        .g1-pagination-item-current {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+// Variables
+$_avatar_size:          68px;
+$_avatar_border_width:  4px;
+$_avatar_overlap_size:  8px;
+
+
+.author-info {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 100px 15px 0;
+
+    text-align: center;
+
+    background: #f2f2f2;
+
+    &:after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+
+    .author-title .g1-delta {
+        margin-bottom: 0.25em;
+    }
+
+    .author-avatar {
+        width: 60px;
+        height: 60px;
+        margin: 0 0 0 -30px;
+
+        position: absolute;
+        top: 20px;
+        #{$left}: 50%;
+        #{$right}: auto;
+    }
+}
+
+@media only screen and ( min-width: 480px ) {
+    .author-info {
+        padding: 30px 30px 0;
+        text-align: left;
+
+        .author-info-inner {
+            position: relative;
+            padding: 0 0 0 90px;
+        }
+
+        .author-avatar {
+            position: absolute;
+            #{$left}: 0;
+            #{$right}: auto;
+            top: 0;
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+    }
+}
+
+

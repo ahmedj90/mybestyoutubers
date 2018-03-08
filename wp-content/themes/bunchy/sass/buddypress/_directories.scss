@@ -1,0 +1,33 @@
+#buddypress {
+    .dir-search {
+        float: $right;
+        margin-bottom: 1rem;
+
+        input {
+            vertical-align: top;
+        }
+
+        input[type=submit] {
+            margin-#{$left}: 6px; //plus white-space between ~4px
+        }
+    }
+
+    .dir-form {
+        clear: both;
+    }
+
+    .current-member-type {
+        font-style: italic;
+    }
+
+}
+
+.g1-bp-header-row {
+    .entry-title {
+        float: $left;
+    }
+
+    .dir-search {
+        float: $right;
+    }
+}

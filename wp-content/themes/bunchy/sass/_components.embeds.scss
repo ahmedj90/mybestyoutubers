@@ -1,0 +1,8 @@
+// Fix the display of Instagram embed (before the JS is applied)
+blockquote.instagram-media,
+blockquote.instagram-media-registered {
+    &:before,
+    &:after {
+        display: none;
+    }
+}

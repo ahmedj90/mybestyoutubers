@@ -1,0 +1,62 @@
+$_icon_size:    34px;
+
+.g1-message {
+    margin-bottom: 1.5em;
+}
+.g1-message-inner {
+    position: relative;
+    padding: 1.5em 1.5em 1.5em 4.5em;
+    text-align: #{$left};
+
+    &:before {
+        width: $_icon_size;
+        height: $_icon_size;
+        display: block;
+        position: absolute;
+        top: 20px;
+        #{$left}: 20px;
+        #{$right}: auto;
+
+        text-align: center;
+        font: 34px/#{$_icon_size} "bunchicon";
+    }
+}
+
+
+/* Color scheme */
+.g1-message-success {
+    background-color: #dff0d8;
+    color: #468847;
+
+    > .g1-message-inner:before {
+        content: "\e010";
+    }
+}
+
+
+.g1-message-info {
+    background-color: #d9edf7;
+    color: #3a87ad;
+
+    > .g1-message-inner:before {
+        content: "\e030";
+    }
+}
+
+.g1-message-warning {
+    background-color: #fcf8e3;
+    color: #c09853;
+
+    > .g1-message-inner:before {
+        content: "\e02f";
+    }
+}
+
+.g1-message-error {
+    background-color: #f2dede;
+    color: #b94a48;
+
+    > .g1-message-inner:before	{
+        content: "\e02f";
+    }
+}

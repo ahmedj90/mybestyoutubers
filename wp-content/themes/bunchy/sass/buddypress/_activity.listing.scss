@@ -1,0 +1,287 @@
+#buddypress {
+    // ul
+    .activity-list {
+        list-style: none;
+
+        > li {
+            overflow: hidden;
+
+            padding: 0;
+            border-width: 0;
+            margin-bottom: 10px;
+        }
+
+        .activity-item {
+            background-color: rgba(0,0,0, 0.03);
+        }
+    }
+
+    .activity-time-since {
+    }
+
+    .time-since {
+        font-weight: 300;
+        font-size: 13px;
+    }
+
+
+
+    .activity-avatar {
+        width: 40px;
+        float: #{$left};
+        margin-top: 10px;
+        margin-#{$left}: 10px;
+        margin-#{$right}: 10px;
+    }
+
+    .activity-content {
+        padding: 10px;
+    }
+
+
+
+    .activity-header {
+        padding-#{$left}: 50px;
+
+        color: #666;
+        line-height: 1.25;
+
+
+        & > p {
+            margin-bottom: 0.75em;
+        }
+
+        // csstodo
+        a {
+            color: #000;
+        }
+
+        a:first-child {
+            font-weight: 500;
+        }
+
+        .activity-time-since {
+            display: block;
+        }
+
+        img.avatar {
+            display: inline-block;
+            float: none;// !important;
+            margin-#{$right}: 6px;
+
+            vertical-align: middle;
+        }
+    }
+
+
+
+    .activity-inner {
+        clear: both;
+        margin: 0.75em 0;
+
+        & > p {
+            margin: 0.75em 0;
+            word-wrap: break-word;
+        }
+
+        & > .activity-inner {
+            margin: 0;
+        }
+
+        & > blockquote {
+            margin: 0;
+        }
+    }
+
+    .activity-inreplyto {
+        font-size: 0.83em;
+        color: #999;
+
+        & > p {
+            margin: 0;
+            display: inline;
+        }
+
+        blockquote,
+        div.activity-inner {
+            background: none;
+            border: none;
+            display: inline;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+    }
+
+    .activity-meta {
+        clear: both;
+        margin-top: 10px;
+
+        a {
+            margin: side-values( 10px 1.5em 0 0 );
+        }
+
+        .button {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            color: inherit !important;
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: "Roboto";
+            color: #666;
+
+            margin-right: 30px;
+        }
+
+        .view,
+        .acomment-reply {
+            &:before {
+                display: inline-block;
+                margin-#{$right}: 0.5em;
+
+                vertical-align: middle;
+                font: 17px/13px "bunchicon";
+
+                content: "\e007";
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        .fav {
+            &:before {
+                display: inline-block;
+                margin-#{$right}: 0.5em;
+
+                vertical-align: middle;
+                font: 17px/13px "bunchicon";
+
+                content: "\e01f";
+            }
+        }
+
+        .unfav {
+            &:before {
+                display: inline-block;
+                margin-#{$right}: 0.5em;
+
+                vertical-align: middle;
+                font: 17px/13px "bunchicon";
+
+                content: "\e020";
+            }
+        }
+
+        .delete-activity {
+            &:before {
+                display: inline-block;
+                margin-#{$right}: 0.5em;
+
+                vertical-align: middle;
+                font: 17px/13px "bunchicon";
+
+                content: "\e021";
+            }
+        }
+
+        .activity-read-more {
+            margin-#{$left}: 1em;
+            white-space: nowrap;
+        }
+    }
+
+
+    li.new_forum_post .activity-content .activity-inner,
+    li.new_forum_topic .activity-content .activity-inner {
+        border-left: 2px solid #EAEAEA;
+        margin-left: 5px;
+        padding-left: 10px;
+    }
+
+
+    li.load-newest {
+        a {
+            display: block;
+            padding: 10px 15px;
+
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Roboto Condensed", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            text-align: center;
+
+
+            background: #f2f2f2;
+            color: inherit;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#buddypress {
+    a.bp-primary-action,
+    a.bp-secondary-action {
+        padding: 0;
+
+        margin-#{$right}: 5px;
+        font-size: 0.83em;
+    }
+}
+
+
+/* highlight some texts, like "Public Group" */
+#buddypress span.highlight {
+    padding: 0;
+
+    margin-#{$right}: 5px;
+    font-size: 0.83em;
+}
+
+
+
+
+
+
+/**
+ * Larger screens
+ */
+@media only screen and ( min-width: $mobile_breakpoint + 1px ) {
+    #buddypress {
+        .activity-list {
+            > li {
+                margin-bottom: 20px;
+            }
+        }
+
+        .activity-avatar {
+            margin-top: 20px;
+            margin-#{$left}: 30px;
+        }
+
+        .activity-content {
+            padding: 20px 30px 20px;
+        }
+    }
+}

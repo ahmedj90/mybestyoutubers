@@ -1,0 +1,80 @@
+.archive-header {
+    padding-top: 20px;
+
+    > .g1-row-background {
+        background-color: #f2f2f2 !important;
+    }
+
+    .g1-column {
+        overflow: hidden;
+    }
+
+    .archive-icon {
+        float: #{$left};
+        margin-#{$right}: 20px;
+    }
+
+    .archive-title {
+        margin-bottom: 20px;
+    }
+
+    .archive-subtitle {
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+
+    .g1user-follow-label {
+        clip: rect(1px, 1px, 1px, 1px);
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+}
+
+.archive-featured {
+    border-width: 0 0 1px;
+    margin-bottom: 1.5rem;
+
+    border-style: solid;
+
+    border-color: #e6e6e6;
+}
+
+.archive-featured-row {
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #474747;
+}
+
+.archive-featured-header {
+    min-height: 0;
+
+    background: #474747;
+    color: rgb(255,255,255);
+    color: rgba(255,255,255, 0.666);
+
+    .archive-featured-title {
+        color: #fff;
+    }
+
+    .g1-column {
+        min-height: 0;
+    }
+}
+
+
+.archive-featured-title,
+#primary > .archive-body-title:first-child {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect( 1px, 1px, 1px, 1px);
+}
+
+
+
+.archive-body {
+    padding: 30px 0;
+}

@@ -1,0 +1,31 @@
+#buddypress {
+    // latest activity, like "active 3 days, 3 hours ago".
+    span.activity {
+        display: inline-block;
+
+        font-size: 0.83em;
+        line-height: 1.25;
+
+        color: #999;
+    }
+}
+
+#buddypress {
+    // Group or member header
+    #item-header {
+        padding-top: 30px;
+    }
+
+    // Group meta, like "Private Group active 1 month, 2 weeks ago"
+    #item-meta {
+    }
+
+    // Container for #group-admins and #group-mods
+    #item-actions {
+    }
+}
+
+.csstodo-padding-xxx {
+    padding-top: 20px;
+    padding-bottom: 3rem;
+}

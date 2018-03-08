@@ -1,0 +1,45 @@
+/* Default Template - Sidebar on Right */
+.g1-content-area {
+    max-width: percentage($grid_width/$layout_boxed_width);
+    width: $grid_width;
+    padding-#{$left}: (100% - percentage($grid_width/$layout_boxed_width) )/2;
+    padding-#{$right}: (100% - percentage($grid_width/$layout_boxed_width) )/2;
+
+    margin-#{$left}: auto;
+    margin-#{$right}: auto;
+    padding: 3rem 0;
+
+    text-align: justify;
+    font-size: 0;
+
+    /* Add a fake line, because text justification doesn't work for just one line */
+    &:after {
+        display: inline-block;
+        width: 100%;
+        content: "";
+    }
+}
+
+
+#primary {
+    display: block;
+
+    font-size: 1rem;
+    text-align: #{$left};
+    vertical-align: top;
+}
+
+#secondary {
+    display: block;
+
+    font-size: 1rem;
+    text-align: #{$left};
+    vertical-align: top;
+}
+
+@media only screen and ( min-width: $mobile_breakpoint + 1px ) {
+    #primary,
+    #secondary {
+        display: inline-block;
+    }
+}

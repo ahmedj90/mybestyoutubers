@@ -1,0 +1,85 @@
+/**
+ * Standard grid entry template.
+ */
+.entry-tpl-grid {
+    position: relative;
+    padding-top: 10px;
+    border-width: 1px 0 0;
+    border-style: solid;
+
+    border-color: #e6e6e6;
+
+    .entry-badge {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    .entry-badge + .entry-flags {
+        margin-top: -10px;
+    }
+
+    .entry-featured-media {
+        margin-top: -10px;
+        margin-bottom: 0.75rem;
+    }
+
+    .entry-badge + .entry-featured-media {
+        margin-top: -20px;
+    }
+
+    .entry-flags + .entry-featured-media {
+        margin-top: -60px;
+    }
+
+    // Edge to edge images.
+    @media only screen and ( max-width: 600px ) {
+        .entry-featured-media {
+            margin-#{$left}: -10px;
+            margin-#{$right}: -10px;
+        }
+    }
+}
+
+
+
+/**
+ * Fancy grid entry template.
+ */
+.entry-tpl-grid-fancy {
+    position: relative;
+    padding-top: 10px;
+    border-width: 1px 0 0;
+    border-style: solid;
+
+    border-color: #e6e6e6;
+
+    .entry-badge {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    .entry-badge + .entry-counter {
+        margin-top: -10px;
+    }
+
+    .entry-featured-media {
+        margin-top: -10px;
+        margin-bottom: 0.75rem;
+    }
+
+    .entry-badge + .entry-featured-media {
+        margin-top: -20px;
+    }
+
+    .entry-counter + .entry-featured-media {
+        margin-top: -60px;
+    }
+
+    // Edge to edge images.
+    @media only screen and ( max-width: 600px ) {
+        .entry-featured-media {
+            margin-#{$left}: -10px;
+            margin-#{$right}: -10px;
+        }
+    }
+}

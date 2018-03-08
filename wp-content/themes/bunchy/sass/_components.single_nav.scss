@@ -1,0 +1,103 @@
+$_back_size: 40px;
+$_arrow_size: 20px;
+$_font_size: 28px;
+
+.g1-nav-single {
+    margin: 2rem 0 1rem;
+
+    font-family: $important_font_family;
+}
+
+.g1-single-nav-label {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.g1-nav-single-links {
+    margin: 0;
+    overflow: hidden;
+    list-style: none;
+
+    &:after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+}
+
+.g1-nav-single-prev,
+.g1-nav-single-next {
+    @include box-sizing( border-box );
+    margin-bottom: 1rem;
+
+    //
+    > a {
+        display: block;
+        color: inherit;
+
+        > strong {
+            display: block;
+            margin-bottom: 0.5em;
+            font-size: 13px;
+            line-height: 16px;
+            font-family: $meta_font_family;
+            font-weight: normal;
+
+            opacity: 0.666;
+        }
+
+        > span {
+            display: block;
+            position: relative;
+        }
+    }
+
+}
+
+.g1-nav-single-prev {
+    > a {
+        > span {
+            margin-#{$left}: auto;
+            margin-#{$right}: 0;
+        }
+    }
+
+}
+
+.g1-nav-single-next {
+    > a {
+        > span {
+            margin-#{$left}: 0;
+            margin-#{$right}: auto;
+        }
+    }
+}
+
+.g1-nav-single-back {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@media only screen and ( min-width: $mobile_breakpoint + 1px ) {
+    .g1-nav-single-prev {
+        float: #{$left};
+        width: 50%;
+        padding-#{$right}: 30px;
+        text-align: #{$left};
+    }
+
+    .g1-nav-single-next {
+        float: #{$right};
+        width: 50%;
+        padding-#{$left}: 30px;
+        text-align: #{$right};
+    }
+}

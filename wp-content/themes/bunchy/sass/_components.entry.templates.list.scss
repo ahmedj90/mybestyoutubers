@@ -1,0 +1,145 @@
+/**
+ * Classic list entry template.
+ */
+
+// List looks like grid on smaller screens.
+.entry-tpl-list {
+    position: relative;
+    padding-top: 10px;
+
+    .entry-badge {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    .entry-badge + .entry-flags {
+        margin-top: -10px;
+    }
+
+    .entry-featured-media {
+        margin-top: -10px;
+        margin-bottom: 0.75rem;
+    }
+
+    .entry-badge + .entry-featured-media {
+        margin-top: -20px;
+    }
+
+    .entry-flags + .entry-featured-media {
+        margin-top: -60px;
+    }
+
+    // Edge to edge images.
+    @media only screen and ( max-width: 600px ) {
+        .entry-featured-media {
+            margin-#{$left}: -10px;
+            margin-#{$right}: -10px;
+        }
+    }
+}
+
+
+// Switch from grid to list.
+@media only screen and ( min-width: 601px ) {
+    .entry-tpl-list {
+        .entry-flags,
+        .entry-featured-media {
+            clear: $left;
+            float: $left;
+            width: 50%;
+            max-width: 364px;
+        }
+
+        .entry-body {
+            overflow: hidden;
+        }
+
+        .entry-featured-media + .entry-body {
+            padding-#{$left}: 20px;
+        }
+    }
+}
+
+// Add more space on bigger screens.
+@media only screen and ( min-width: 1025px ) {
+    .entry-tpl-list {
+        .entry-featured-media + .entry-body {
+            padding-#{$left}: 30px;
+        }
+    }
+}
+
+
+
+/**
+ * Fancy list entry template.
+ *
+ * A mumbered list you can see on the Popular, Hot and Trending page.
+ */
+
+// List looks like grid on smaller screens.
+.entry-tpl-list-fancy {
+    position: relative;
+    padding-top: 10px;
+
+    .entry-badge {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    .entry-badge + .entry-counter {
+        margin-top: -10px;
+    }
+
+    .entry-featured-media {
+        margin-top: -10px;
+        margin-bottom: 0.75rem;
+    }
+
+    .entry-badge + .entry-featured-media {
+        margin-top: -20px;
+    }
+
+    .entry-counter + .entry-featured-media {
+        margin-top: -60px;
+    }
+
+    // Edge to edge images.
+    @media only screen and ( max-width: 600px ) {
+        .entry-featured-media {
+            margin-#{$left}: -10px;
+            margin-#{$right}: -10px;
+        }
+    }
+}
+
+
+// Switch from grid to list.
+@media only screen and ( min-width: 601px ) {
+    .entry-tpl-list-fancy {
+        .entry-counter,
+        .entry-featured-media {
+            clear: $left;
+            float: $left;
+            width: 50%;
+            max-width: 364px;
+        }
+
+        .entry-featured-media {
+            margin-#{$right}: 20px;
+        }
+
+        .entry-body {
+            overflow: hidden;
+        }
+    }
+}
+
+// Add more space on bigger screens.
+@media only screen and ( min-width: 1025px ) {
+    .entry-tpl-list-fancy {
+        .entry-featured-media {
+            margin-#{$right}: 30px;
+        }
+    }
+}

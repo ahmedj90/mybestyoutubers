@@ -1,0 +1,35 @@
+ul.tagit {
+    padding-#{$left}: 8px;
+    padding-#{$right}: 8px;
+
+    border-color: #e6e6e6;
+
+    @include transition(
+        border-color 0.375s ease-in-out,
+        background-color 0.375s ease-in-out,
+        color 0.375s ease-in-out
+    );
+
+    li.tagit-new {
+        input {
+            height: auto;
+        }
+    }
+
+    li.tagit-choice {
+        @include border-radius( 4px );
+
+        border-color: #e6e6e6;
+        background-color: #e6e6e6;
+    }
+
+    li.tagit-choice:hover,
+    li.tagit-choice.remove {
+        background-color: #bbcef1;
+        border-color: #bbcef1;
+    }
+}
+
+ul.tagit-focus {
+    border-color: currentColor;
+}

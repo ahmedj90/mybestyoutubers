@@ -1,0 +1,19 @@
+.g1-404-icon {
+    display: inline-block;
+    margin-bottom: 0.2em;
+
+    font: #{17px*3}/1 "bunchicon";
+    opacity: 0.2;
+
+    &:before {
+        .g1-404-search &  { content: "\e005"; }
+        .g1-404-home &    { content: "\e015"; }
+        .g1-404-report &  { content: "\e00c"; }
+    }
+}
+
+@media only screen and ( $mobile_breakpoint + 1px ) {
+    .g1-404-icon {
+        font-size: 17px*5;
+    }
+}

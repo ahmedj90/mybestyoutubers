@@ -1,0 +1,102 @@
+.widget.buddypress {
+    .item-list {
+        margin-#{$left}: 0;
+        padding-#{$left}: 0;
+        list-style: none;
+
+        > li {
+            clear: both;
+        }
+    }
+
+
+
+    .item-avatar {
+        img.avatar {
+            float: #{$left};
+            width: 40px;
+            height: 40px;
+            margin: side-values( 0 10px 15px 0 );
+        }
+    }
+
+    // It should be called .item-body rather
+    .item{
+        margin: side-values( 0 0 15px 0 );
+
+        .item-meta,
+        .item-content {
+            margin-#{$left}: 50px;
+            font-size: 0.83em;
+            line-height: 1.25;
+        }
+    }
+
+    // Item nav, like "newest|active|popular"
+    .item-options {
+        font-size: 0.83em;
+        margin: 0 0 1.5em;
+
+        // PP
+        & > a:not( .selected ) {
+            color: inherit;
+        }
+    }
+}
+
+
+
+
+/* Login Widget */
+.widget.buddypress #bp-login-widget-form {
+    label {
+        display: block;
+        margin: 1em 0 .125em;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+    }
+
+    .forgetmenot {
+        margin: 0 0 1em;
+    }
+
+    #bp-login-widget-submit {
+        margin-#{$right}: 10px;
+    }
+
+    .bp-login-widget-register-link {
+        font-size: 14px;
+        font-family: "Roboto Condensed";
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+}
+
+
+.widget_bp_core_login_widget {
+    padding: 30px;
+    background: #f2f2f2;
+
+    .bp-login-widget-user-avatar {
+        float: $left;
+
+        img.avatar {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .bp-login-widget-user-links {
+        & > div {
+            //margin-bottom: .5rem;
+            padding-left: 60px;
+        }
+
+        > div.bp-login-widget-user-link a {
+            font-weight: bold;
+        }
+    }
+}

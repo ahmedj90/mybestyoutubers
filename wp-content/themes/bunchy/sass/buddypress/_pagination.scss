@@ -1,0 +1,77 @@
+#buddypress {
+    .pagination {
+        display: block;
+        padding: 10px 0;
+        border-width: 1px 0;
+        margin: 1.5em 0;
+
+        position: relative;
+
+        font-size: 0.83em;
+        border-style: solid;
+
+        border-color: #e6e6e6;
+
+        // Clearfix
+        &:after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .pag-count {
+            float: #{$left};
+            margin-#{$right}: 0.75em;
+        }
+
+        .pagination-links {
+            float: $right;
+            margin-#{$left}: 0.75em;
+
+            // The proper class name would probably be .pagination-link
+            .page-numbers {
+                display: inline-block;
+                padding: 0 5px;
+
+                vertical-align: middle;
+            }
+
+            .prev {
+                display: inline-block;
+                font-size: 0;
+
+                vertical-align: middle;
+
+                &:before {
+                    font: 18px/1 "bunchicon";
+
+                    content: if-ltr( "\e027", "\028" );
+                }
+            }
+
+
+            .next {
+                display: inline-block;
+                font-size: 0;
+
+                vertical-align: middle;
+
+                &:after {
+                    font: 18px/1 "bunchicon";
+
+                    content: if-ltr( "\e028", "\e027" );
+                }
+            }
+        }
+    }
+
+    #pag-top {
+        padding-top: 0;
+        border-top-width: 0;
+    }
+
+    #pag-bottom {
+        padding-bottom: 0;
+        border-bottom-width: 0;
+    }
+}

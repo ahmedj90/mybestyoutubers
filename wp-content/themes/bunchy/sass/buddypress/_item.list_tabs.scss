@@ -1,0 +1,183 @@
+$_icon_size: 34px;
+#buddypress {
+    .item-list-tabs {
+        clear: both;
+        margin: 0 0 10px;
+
+        text-transform: uppercase;
+        font-family: "Roboto Condensed";
+
+        > ul {
+            margin: 0;
+            padding: 0;
+
+            &:after {
+                display: table;
+                clear: both;
+                content: "";
+            }
+
+            > li {
+                float: left;
+                margin: 0;
+                list-style: none;
+
+                > a {
+                    color: inherit;
+                    opacity: 0.666;
+
+                    @include transition( opacity 0.375s ease-in-out );
+                }
+
+                > a,
+                > span {
+                    position: relative;
+                    display: block;
+                    padding: 0 10px;
+                }
+
+                .count {
+                    display: inline-block;
+                    box-sizing: padding-box;
+
+                    min-width: 1.5em;
+                    padding: 0;
+                    border-width: 1px;
+                    margin-#{$left}: 0.25em;
+
+                    text-align: center;
+                    vertical-align: top;
+                    font-size: 0.83em;
+                    line-height: 1.5;
+
+                    font-family: "Roboto Condensed", sans-serif;
+
+                    border-style: solid;
+                    border-radius: 0.75em;
+                    border-radius: calc( 0.75em + 1px );
+
+                    border-color: #808080;
+                    background-color: #808080;
+                    color: #fff;
+                }
+
+                .no-count {
+                    display: none;
+                }
+            }
+
+            > li.selected,
+            > li.current,
+            > li:hover {
+                > a {
+                    color: #333 !important;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    }
+
+
+    .item-list-tabs#object-nav {
+        margin-top: 0;
+
+        > ul {
+            width: 100%;
+            //overflow-x: hidden;
+            white-space: nowrap;
+
+            > li {
+                display: inline-block;
+                float: none;
+                white-space: normal;
+
+                vertical-align: top;
+
+                // Icon.
+                > a:before {
+                    display: block;
+                    text-align: center;
+
+                    font: #{$_icon_size}/40px "bunchicon";
+
+                    content: "\e009";
+
+                    @include transition( opacity 0.375s ease-in-out );
+
+                    opacity: 0.5;
+                }
+
+                > #user-activity:before       { content: "\e013"; }
+
+                > #user-xprofile:before       { font-size: 48px; content: "\e01d"; }
+                > #user-friends:before        { font-size: 56px; content: "\e01e"; }
+                > #user-groups:before         { font-size: 56px; content: "\e01e"; }
+
+                > #user-notifications:before  { content: "\e00b"; }
+                > #user-messages:before       { content: "\e00c"; }
+                > #user-forums:before         { content: "\e00a"; }
+                > #user-settings:before       { content: "\e008"; }
+
+                > #user-snax_posts:before     { content: "\e00d" }
+                > #user-snax_items:before     { content: "\e01c" }
+                > #user-snax_votes:before     { content: "\e018" }
+
+                > #home:before                { content: "\e015"; }
+                > #nav-forum:before           { content: "\e00a"; }
+                > #invite:before              { content: "\e00c"; }
+                > #members:before             { font-size: 56px; content: "\e01e"; }
+                > #admin:before               { content: "\e008"; }
+            }
+
+            > li.selected,
+            > li.current,
+            > li:hover {
+                a:before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .g1-drop-toggle {
+            font-size: inherit;
+
+            &:before {
+                content: "\e02c";
+            }
+        }
+
+        .g1-drop-content {
+            padding-#{$left}: 30px;
+            padding-#{$right}: 30px;
+        }
+    }
+
+
+
+
+    .item-list-tabs#subnav {
+        padding-top: 5px;
+        border-top: 1px solid #e6e6e6;
+        margin-bottom: 3em;
+
+        text-transform: none;
+        font-family: $regular_font_family;
+
+        label,
+        select {
+            font-size: 0.83em;
+        }
+
+        .last {
+            float: $right;
+
+            select {
+                max-width: 185px;
+            }
+        }
+    }
+}

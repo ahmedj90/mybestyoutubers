@@ -1,0 +1,347 @@
+/**
+ * MashShare LTR | RTL
+ */
+.mashsb-count {
+    float: #{$left};
+
+    font-family: $important_font_family;
+    font-weight: 600;
+}
+
+[class*=" mashicon-"] .icon::before,
+[class^="mashicon-"] .icon::before {
+    margin-#{$right}: 0;
+
+    @media only screen and ( min-width: $mobile_breakpoint + 1px ) {
+        & {
+            margin-#{$right}: 0.7em;
+        }
+    }
+}
+
+
+
+
+/**
+ * Change the yellow subscribe icon
+ */
+.mashicon-subscribe {
+    background: #a60505;
+
+    .icon,
+    .text {
+        color: #fff;
+    }
+
+    .icon:before {
+        font-family: "bunchicon";
+        content: "\e00c";
+    }
+}
+
+/* Change the yellow subscribe icon */
+.mashsb-toggle-container {
+    position: relative;
+    margin-top: 15px;
+    padding: 1.5rem 1.5rem 0;
+    border-width: 0;
+    border-color: currentColor;
+
+    &:before {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        #{$left}: 0;
+        #{$right}: 0;
+        top: 0;
+        bottom: 0;
+
+        border-width: 6px;
+        border-style: solid;
+
+        content: "";
+
+        opacity: 0.1667;
+    }
+
+    &:after {
+        display: block;
+        overflow: hidden;
+        height: 0;
+        margin-top: 1.5rem;
+
+        content: " ";
+    }
+}
+
+
+.mashsb-container {
+    & + & {
+        display: none;
+    }
+}
+
+.mashsb-box {
+    font-family: $important_font_family;
+    font-weight: 500;
+}
+
+.mashsb-count {
+    margin-top: 0;
+    margin-#{$right}: 15px;
+}
+
+.mashsb-buttons .mashsb-count {
+    margin-#{$right}: 0;
+    margin-#{$left}: 15px;
+}
+
+.mashsb-buttons .mashsb-count:first-child {
+    margin-#{$right}: 15px;
+    margin-#{$left}: 0;
+}
+
+.mashsb-sharetext {
+    font-family: $meta_font_family;
+    font-weight: 300;
+}
+
+
+.mashsb-main {
+    clear: both;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .mashsbcount,
+    .mashpv .count {
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .mashsb-count {
+        margin-#{$right}: 10px;
+    }
+
+    .mashsb-sharetext {
+        display: block;
+        font-size: 13px;
+        line-height: 1;
+        font-family: $meta_font_family;
+        font-weight: 300;
+    }
+
+    .mashsb-buttons {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and ( min-width: 1025px ) {
+    .mashsb-main {
+        .mashsb-count {
+            min-width: 110px;
+        }
+    }
+}
+
+
+
+.mashsb-buttons {
+    // Clearfix
+    &:after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    a {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        min-width: 0;
+
+        margin: 0;
+        text-align: center;
+    }
+
+    .text {
+        display: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .onoffswitch,
+    .onoffswitch2 {
+        margin: 0;
+
+        &:before {
+            font-size: 32px;
+            line-height: 42px;
+            font-family: "bunchicon";
+            content: "\e00f";
+        }
+    }
+
+    .onoffswitch2 {
+        &:before {
+            font-size: 17px;
+            content: "\e00e";
+        }
+    }
+}
+
+.mashsb-box .mashsb-buttons a {
+    margin: 0;
+}
+
+
+
+@media only screen and ( min-width: $mobile_breakpoint + 1px ) {
+    .mashsb-main {
+        .mashsbcount,
+        .mashpv .count {
+            font-size: 48px;
+            line-height: 42px;
+        }
+    }
+
+    .mashsb-buttons {
+        .text {
+            display: block;
+        }
+    }
+}
+
+
+
+$_microshare_toggle_width: 32px;
+$_microshare_toggle_height: 32px;
+
+$_microshare_icon_width: 48px;
+$_microshare_icon_height: 48px;
+
+.mashsb-micro {
+    position: absolute;
+    #{$left}: 6px;
+    #{$right}: auto;
+    top: 6px;
+
+    @media only screen and ( min-width: 1024px ) {
+        #{$right}: 100%;
+        #{$left}: auto;
+        top: 0;
+        padding-#{$right}: 6px;
+    }
+
+    .mashsb-buttons {
+        display: none;
+        overflow:  hidden;
+        @include border-radius( 0 );
+
+        a {
+            margin: 0px;
+            padding: 0px;
+
+            @include border-radius( 0 );
+
+            .icon {
+                display: block;
+                width: $_microshare_icon_width;
+                height: $_microshare_icon_height;
+                margin: 0;
+
+                text-align: center;
+
+                &:before {
+                    float: none;
+                    margin: 0;
+                    line-height: $_microshare_icon_height;
+                }
+            }
+        }
+
+        .text {
+            display: none;
+        }
+    }
+}
+
+.mashsb-micro {
+    .mashsb-micro-toggle {
+        display: block;
+
+        width: $_microshare_toggle_width;
+        height: $_microshare_toggle_height;
+        cursor: pointer;
+
+        text-align: center;
+        font-size: 17px;
+        line-height: $_microshare_toggle_height;
+        font-weight: normal;
+
+        @include border-radius( 0 );
+
+        background: #fff;
+        color: #666;
+
+        &:before {
+            font-family: "bunchicon";
+            content: "\e017";
+        }
+    }
+}
+
+
+.g1-img-wrap {
+    display: block;
+    position: relative;
+}
+
+
+.mashsb-micro-wrapper {
+    display: block;
+    position: relative;
+
+    .onoffswitch,
+    .onoffswitch2 {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+}
+
+.g1-hoverable .mashsb-micro-wrapper:hover,
+.mashsb-micro-wrapper-expanded {
+    .mashsb-micro {
+        .mashsb-micro-toggle {
+            display: none;
+        }
+
+        .mashsb-buttons {
+            display: block;
+        }
+    }
+}
+

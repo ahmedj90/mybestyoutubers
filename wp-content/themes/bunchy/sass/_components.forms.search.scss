@@ -1,0 +1,20 @@
+/* Search form */
+.search-form {
+    margin-bottom: 1.5rem;
+
+    label {
+        display: block;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .search-submit {
+        position: absolute;
+        clip: rect( 1px, 1px, 1px, 1px );
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,123 @@
+#buddypress {
+    // Member | Group | Activity list - <ul>
+    .item-list {
+        clear: both;
+        margin: 0;
+
+        list-style: none;
+
+        .item-title,
+        h4 {
+            margin: 0;
+            width: 75%;
+
+            a {
+                font-weight: 500;
+                color: #333;
+            }
+        }
+
+
+
+        li {
+            padding: 15px 0;
+            border-width: 1px 0 0;
+            margin: 0;
+
+            position: relative;
+
+            list-style: none;
+            border-style: solid;
+
+            border-color: #e6e6e6;
+
+            &:first-child {
+                border-width: 0;
+            }
+
+            .item-avatar {
+                float: #{$left};
+                margin: side-values( 0 10px 0 0 );
+            }
+
+
+
+
+            h5 span.small {
+                float: #{$right};
+                font-size: 0.83em;
+                font-weight: normal;
+            }
+
+            .item-title {
+                span {
+                    font-size: 0.83em;
+                }
+            }
+
+            .item-desc {
+                margin: side-values( 10px 0 0 60px );
+                width: 50%;
+            }
+
+            .action {
+                position: absolute;
+                top: 15px;
+                #{$right}: 0;
+                #{$left}: auto;
+                text-align: $right;
+            }
+
+            .meta {
+                color: #999;
+                font-size: 0.83em;
+                margin-top: 10px;
+            }
+        }
+
+        li.group-no-avatar {
+            div.item-desc {
+                margin-#{$left}: 0;
+            }
+        }
+    }
+}
+
+
+
+
+#buddypress {
+    #admins-list,
+    #mods-list,
+    #members-list {
+        overflow: auto;
+        margin-bottom: 3rem;
+        list-style: none;
+
+        li {
+            overflow: auto;
+            list-style: none;
+        }
+    }
+
+
+    #item-buttons:empty {
+        display: none;
+    }
+}
+
+
+
+#buddypress #item-nav ul li.loading a {
+    background-position: 88% 50%;
+}
+
+
+
+/* No JavaScript */
+body.no-js #buddypress {
+    #item-header .js-self-profile-button {
+        display: none;
+    }
+}
+

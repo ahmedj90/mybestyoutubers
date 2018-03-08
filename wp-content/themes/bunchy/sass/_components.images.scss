@@ -1,0 +1,136 @@
+$_frame_large_icon_size: 84px;
+$_frame_large_icon_font_size: 17px;
+
+$_frame_medium_icon_size: 40px;
+$_frame_medium_icon_font_size: 17px;
+
+$_frame_small_icon_size: 28px;
+$_frame_small_icon_font_size: 17px;
+
+@-webkit-keyframes g1_frame_icon_bounce {
+    0%      { -webkit-transform: scale(1, 1); }
+    50%     { -webkit-transform: scale(0.5, 0.5); }
+    100%    { -webkit-transform: scale(1, 1); }
+}
+
+@keyframes g1_frame_icon_bounce {
+    0%      { transform: scale(1, 1); }
+    50%     { transform: scale(0.5, 0.5); }
+    100%    { transform: scale(1, 1); }
+}
+
+
+.alignleft {
+    max-width: 50%;
+    margin: 0 1.5em 0.75em 0;
+    float: #{$left};
+
+}
+.alignright {
+    margin: side-values( 0 0 0.75em 1.5em );
+    float: #{$right};
+}
+.aligncenter {
+    margin-#{$left}: auto;
+    margin-#{$right}: auto;
+    display:block;
+}
+
+
+/* Responsive captions */
+.mceTemp,
+.wp-caption,
+.wp-caption-dt,
+.wp-caption-dd {
+    max-width:100%;
+}
+
+.gallery-caption {
+    text-transform:none;
+}
+
+.wp-caption {
+    img {
+        display: block;
+    }
+}
+
+.wp-caption-text {
+    padding-top: 0.5em;
+    padding-#{$right}: 10px;
+
+    text-align: #{$left};
+    font-size: 13px;
+    line-height: 1.125;
+    font-family: $meta_font_family;
+    font-style: normal;
+    font-weight: 400;
+
+    opacity: 0.666;
+
+    a {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+
+
+.g1-frame {
+    display: block;
+}
+
+.g1-frame-inner {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+
+    position: relative;
+
+    img {
+        display: block;
+    }
+}
+
+.g1-frame-icon {
+    display: none;
+    @include box-sizing( border-box );
+    width: $_frame_medium_icon_size;
+    height: $_frame_medium_icon_size;
+    margin-top: -$_frame_medium_icon_size/2;
+    margin-#{$left}: -$_frame_medium_icon_size/2;
+
+    position: absolute;
+    z-index: 1;
+    #{$left}: 50%;
+    #{$right}: auto;
+    top: 50%;
+
+    font: #{$_frame_medium_icon_font_size}/#{$_frame_medium_icon_size} "bunchicon";
+    text-align: center;
+
+    @include border-radius( 50% );
+    background-color: #fff;
+
+    color: #000;
+    text-shadow: none;
+
+    &:before {
+        content: "\e016";
+    }
+}
+
+
+
+.format-video {
+    > .entry-featured-media {
+        .g1-frame-icon {
+            display: block;
+
+            &:before {
+                padding-#{$left}: 10%;
+            }
+        }
+    }
+}
